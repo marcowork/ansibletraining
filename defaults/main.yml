@@ -1,0 +1,4 @@
+---
+# defaults file for marcowork.ansibletraining
+port: 1948
+css: "theme/test.css"

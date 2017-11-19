@@ -1,0 +1,19 @@
+galaxy_info:
+  author: marcowork
+  description: Role to install the ansible training presentation into reveal-MD
+  company: marcowork
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.1
+
+  platforms:
+  - name: EL
+    versions:
+      - 7
+
+  galaxy_tags:
+    - Reveal-MD
+    - presentation
+    - Ansible-Training
+
+dependencies:
+  - marcowork.ansible-role-revealmd

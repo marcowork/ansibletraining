@@ -1,0 +1,15 @@
+---
+# tasks file for marcowork.ansibletraining
+ - name: copy the presentation to the server
+   copy:
+     src: "{{ role_path }}/files/ansible-training"
+     dest: /data/
+
+ - name: start revealmd
+   shell: ( reveal-md /data/ansible-training/marco.md --port {{ port }} --css {{ css }} & ) ; touch /tmp/revealmd-started
+   async: 5
+   poll: 0
+   args:
+    chdir: "/data/ansible-training"
+    creates: /tmp/revealmd-started
+   register: started
